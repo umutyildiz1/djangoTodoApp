@@ -1,0 +1,9 @@
+<h3>Create Todo</h3>
+<a href="{% url 'todos' %}">Go to Back</a>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <input type="submit" value="Submit">
+
+</form>

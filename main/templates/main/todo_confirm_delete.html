@@ -1,7 +1,15 @@
-<a href="{% url 'todos' %}">Go to Back</a>
+{% extends 'main/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+<a href="{% url 'todos' %}">&#8592;Go to Back</a></div>
+
+<div class="card-body">
 <form method="POST">
     {% csrf_token %}
 
     <p>Do you want to delete {{todo}}?</p>
-    <input type="submit" value="Delete" />
-</form>
+    <input class="button"type="submit" value="Delete" />
+</form></div>
+
+{% endblock content %}
